@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shary Vibes — Гигантские шарики‑сердца</title>
+<style>
+  :root{--bg:#0b1020;--card:#0f1724;--accent:#ff2d4b;--muted:#98a0ad;--radius:20px;--maxw:1200px;font-family: 'Inter', sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:radial-gradient(1200px 600px at 10% 10%,rgba(255,45,75,0.06),transparent),var(--bg);color:#e6eef8;overflow-x:hidden;position:relative;font-family:inherit;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:var(--maxw);margin:30px auto;padding:28px;position:relative;z-index:2;}
+  header{display:flex;align-items:center;gap:18px;}
+  .logo{animation:spin 10s linear infinite;}
+  .logo svg{width:64px;height:64px;}
+  @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  .hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;margin-top:22px;}
+  .card-hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius);box-shadow:0 10px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);width:100%;max-width:640px;}
+  .hero h2{font-size:28px;}
+  .lead{color:var(--muted);margin-top:12px;font-size:15px;}
+  .prices{margin-top:18px;display:flex;flex-direction:column;gap:12px;}
+  .price-row{display:flex;justify-content:space-between;align-items:flex-start;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.03);}
+  .price-left{display:flex;flex-direction:column;}
+  .price-name{font-weight:700;font-size:16px;}
+  .price-desc{color:var(--muted);font-size:13px;margin-top:4px;}
+  .price-cost{font-weight:900;color:var(--accent);font-size:18px;}
+  .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:800;cursor:pointer;}
+  .btn-wh{background:linear-gradient(90deg,#25d366,#1ebe57);color:#042007;}
+  .hero-image{width:100%;max-width:640px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04);}
+  .hero-image img{width:100%;height:auto;display:block;animation:float 6s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px;}
+  .tile{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);}
+  .tile img{width:100%;height:260px;object-fit:cover;}
+  .order-bar{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),#ff6b84);color:#fff;padding:12px 16px;border-radius:999px;display:flex;gap:12px;align-items:center;z-index:3;}
+  .order-bar .phone{font-weight:800;}
+  footer{margin-top:32px;color:var(--muted);font-size:13px;text-align:center;}
+  .left-confetti{position:fixed;left:0;top:0;width:80px;height:100%;pointer-events:none;z-index:1;overflow:hidden;}
+  .left-confetti .emoji{position:absolute;bottom:-50px;font-size:20px;animation:riseLeft linear infinite;}
+  @keyframes riseLeft{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-1200px) rotate(360deg)}}
+  .confetti{position:fixed;bottom:-50px;font-size:24px;pointer-events:none;animation:rise 8s linear infinite;z-index:1;}
+  @keyframes rise{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-1200px) rotate(360deg)}}
+  .firework{position:absolute;width:6px;height:6px;border-radius:50%;background:yellow;pointer-events:none;animation:fw 1s ease-out forwards;}
+  @keyframes fw{0%{transform:scale(0)}50%{transform:scale(1.5)}100%{opacity:0;transform:scale(0);}}
+  #countdown{margin-top:10px;font-weight:700;font-size:16px;color:#ff6b84;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo">
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="lg" x1="0%" x2="100%"><stop offset="0%" stop-color="#ff7b7b"/><stop offset="100%" stop-color="#ff2d4b"/></linearGradient></defs>
+<rect width="64" height="64" rx="12" fill="url(#lg)"/>
+<g transform="translate(6,6)" fill="#fff"><path d="M22 6c-4-6-14-6-18 2-4 8 6 18 18 28 12-10 22-20 18-28-4-8-14-8-18-2z"/></g>
+</svg>
+</div>
+<div class="title">
+<h1>Shary Vibes</h1>
+<p>Гигантские шарики‑сердца · Алматы</p>
+</div>
+</header>
+
+<section class="hero">
+<div class="card-hero">
+<h2>Эффектные гиганты — понятный прайс</h2>
+<p class="lead">Быстро оформляем через WhatsApp — напишите нам позицию и дату.</p>
+<div class="prices">
+<div class="price-row"><div class="price-left"><span class="price-name">Гигант шар</span><p class="price-desc">Красный шар, 163 дюйма. Отлично для фотозоны.</p></div><span class="price-cost">18 000 ₸</span></div>
+<div class="price-row"><div class="price-left"><span class="price-name">Гигант комбо</span><p class="price-desc">7 мини‑сердечек + надпись в подарок.</p></div><span class="price-cost">25 000 ₸</span></div>
+<div class="price-row"><div class="price-left"><span class="price-name">Гигант комбо 1</span><p class="price-desc">20 мини‑сердечек + надпись в подарок.</p></div><span class="price-cost">35 000 ₸</span></div>
+<div class="price-row"><div class="price-left"><span class="price-name">Цифра — 1 шт</span><p class="price-desc">Фольгированная цифра (~90–120 см). Можно добавить к гиганту.</p></div><span class="price-cost">3 500 ₸</span></div>
+<div class="price-row"><div class="price-left"><span class="price-name">Цифра комбо</span><p class="price-desc">(2 цифры + 10 мини‑сердечек)</p></div><span class="price-cost">15 000 ₸</span></div>
+</div>
+<div class="cta-row"><button class="btn btn-wh" onclick="openWhatsApp('Здравствуйте! Хочу оформить заказ.')">Написать в WhatsApp</button></div>
+<div id="countdown">Загрузка таймера...</div>
+</div>
+<div class="hero-image">
+<img src="https://images.pexels.com/photos/9955060/pexels-photo-9955060.jpeg?auto=compress&cs=tinysrgb&h=900&w=1280" alt="Гигантские красные шарики‑сердца" />
+</div>
+</section>
+
+<section class="gallery">
+<div class="tile"><img src="https://images.pexels.com/photos/704748/pexels-photo-704748.jpeg?auto=compress&cs=tinysrgb&h=900&w=1280"></div>
+<div class="tile"><img src="https://images.pexels.com/photos/6629600/pexels-photo-6629600.jpeg?auto=compress&cs=tinysrgb&h=900&w=1280"></div>
+<div class="tile"><img src="https://images.pexels.com/photos/5736144/pexels-photo-5736144.jpeg?auto=compress&cs=tinysrgb&h=900&w=1280"></div>
+</section>
+
+<footer>📍 Алматы · Shary Vibes · Заказ: +7 707 624 4245</footer>
+</div>
+
+<div class="order-bar">
+<div><div style="font-weight:800">Заказать сейчас</div><div style="font-size:13px;">WhatsApp: <span class="phone">+7 707 624 4245</span></div></div>
+<button class="btn btn-wh" onclick="openWhatsApp('Здравствуйте! Хочу оформить заказ.')">Написать</button>
+</div>
+
+<div class="left-confetti" id="leftConfetti"></div>
+
+<script>
+const phoneNumber='77076244245';
+function openWhatsApp(msg){
+  const encoded=encodeURIComponent(msg+'\n\n(Номер: +7 707 624 4245)');
+  window.open(`https://wa.me/${phoneNumber}?text=${encoded}`,'_blank');
+}
+// Таймер
+const events=[
+  {name:'День Валентина',date:new Date(new Date().getFullYear(),1,14,0,0,0)},
+  {name:'Новый год',date:new Date(new Date().getFullYear(),11,31,23,59,59)},
+  {name:'Хэллоуин',date:new Date(new Date().getFullYear(),9,31,0,0,0)}
+];
+function getNextEvent(){
+  const now=new Date();
+  for(let e of events){
+    if(e.date>now) return e;
+    e.date.setFullYear(e.date.getFullYear()+1);
+    if(e.date>now) return e;
+  }
+}
+const countdown=document.getElementById('countdown');
+setInterval(()=>{
+  const event=getNextEvent();
+  const diff=event.date-new Date();
+  const d=Math.floor(diff/1000/60/60/24);
+  const h=Math.floor(diff/1000/60/60)%24;
+  const m=Math.floor(diff/1000/60)%60;
+  const s=Math.floor(diff/1000)%60;
+  const ms=diff%1000;
+  countdown.innerText=`До ${event.name}: ${d}д ${h}ч ${m}м ${s}с ${ms}мс`;
+},30);
+
+// Эмодзи и шары
+const confettiEmojis=['🎈','❤️','💖','🎉','✨','💌','🌟'];
+function createConfetti(){
+  const conf=document.createElement('div');
+  conf.className='confetti';
+  conf.style.left=Math.random()*window.innerWidth+'px';
+  conf.style.fontSize=(12+Math.random()*20)+'px';
+  conf.innerText=confettiEmojis[Math.floor(Math.random()*confettiEmojis.length)];
+  document.body.appendChild(conf);
+  setTimeout(()=>conf.remove(),8000);
+}
+setInterval(createConfetti,300);
+
+// Левый поток эмодзи
+const leftConf=document.getElementById('leftConfetti');
+function createLeftEmoji(){
+  const em=document.createElement('div');
+  em.className='emoji';
+  em.style.left=Math.random()*60+'px';
+  em.style.fontSize=(12+Math.random()*16)+'px';
+  em.innerText=confettiEmojis[Math.floor(Math.random()*confettiEmojis.length)];
+  leftConf.appendChild(em);
+  setTimeout(()=>em.remove(),10000);
+}
+setInterval(createLeftEmoji,500);
+
+// Фейерверки
+function createFirework(){
+  for(let i=0;i<15;i++){
+    const fw=document.createElement('div');
+    fw.className='firework';
+    fw.style.left=Math.random()*window.innerWidth+'px';
+    fw.style.top=Math.random()*window.innerHeight+'px';
+    fw.style.background=`hsl(${Math.random()*360},100%,50%)`;
+    document.body.appendChild(fw);
+    setTimeout(()=>fw.remove(),1000);
+  }
+}
+setInterval(createFirework,2000);
+</script>
+</body>
+</html>
